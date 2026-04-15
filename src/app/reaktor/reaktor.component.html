@@ -1,0 +1,12 @@
+<div>
+    <p appPodkreslenie>Reaktor: {{ nazwa }}</p>
+    <p>Temperatura: {{ temperatura }}°C</p>
+    <button (click)="podniesToperature()">Podnieś temperature</button>
+  
+    <p *ngIf="temperatura < 16">Rdzen reaktora jest zimny</p>
+    <p *ngIf="temperatura >= 16 && temperatura <= 90">Temperatura reaktora jest w normie</p>
+    <p *ngIf="temperatura > 90">Reaktor jest w stanie krytycznym</p>
+  
+    <p>Temperatura Signal: {{ temperaturaSignal() }}</p>
+    <p>Status Signal: {{ statusSignal() }}</p>
+  </div>
